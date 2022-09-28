@@ -1,0 +1,9 @@
+.order-container{
+    position: sticky;
+    top: 0;
+    padding: 10px;
+}
+
+.order-container h2{
+    text-align: center;
+}
