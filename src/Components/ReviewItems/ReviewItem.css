@@ -1,0 +1,47 @@
+.review-container{
+    display: flex;
+    border: 1px solid rgb(197, 197, 197);
+    gap: 10px;
+    margin: 5px auto;
+    width: 571px;
+    border-radius: 10px;
+    padding: 5px;
+}
+.review-container img{
+    border-radius: 10px;
+    width: 90px;
+    height: 100%;
+}
+.details-inside{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.details-inside h5{
+    margin: 0;
+}
+.details-inside p{
+    margin: 0;
+}
+.details-inside span{
+    color: #FF9900;
+}
+.button-class{
+    width: 55px;
+    height: 55px;
+    background-color: rgba(235, 87, 87, 0.3);
+    border: 0;
+    margin: 5px;
+    padding: 12px;
+    border-radius: 50%;
+}
+.button-class:hover{
+    background-color: rgba(250, 3, 3, 0.3);
+    cursor: pointer;
+    
+}
+.icon-class{
+    color: #EB5757;
+    font-size: 25px;
+}
