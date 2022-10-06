@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import { addToDb, getstoredcarddata } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./shop.css";
 
 const Shop = () => {
-  const [products, setproducts] = useState([]);
+  const products = useLoaderData();
   const [cart, setcart] = useState([]);
 
   const clickHundlecart = (selectedproduct) => {
@@ -24,13 +25,6 @@ const Shop = () => {
     setcart(newcart);
     addToDb(selectedproduct.id);
   };
-
-  useEffect(() => {
-    fetch("products.json")
-      .then((res) => res.json())
-      .then((data) => setproducts(data));
-  }, []);
-
   useEffect(() => {
     const storeddata = getstoredcarddata();
     const savecart = [];
@@ -39,7 +33,6 @@ const Shop = () => {
       if (addedproduct) {
         const quantity = storeddata[id];
         addedproduct.quantity = quantity;
-        console.log(addedproduct);
         savecart.push(addedproduct);
       }
     }
