@@ -5,7 +5,7 @@ import Cart from "../Cart/Cart";
 import ReviewItem from "../ReviewItems/ReviewItem";
 
 const Orders = () => {
-  const { products, givenCart } = useLoaderData();
+  const { givenCart } = useLoaderData();
   const [cart, setcart] = useState(givenCart);
 
   const handleRemoveItem = (id) => {
