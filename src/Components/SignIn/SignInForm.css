@@ -2,17 +2,21 @@
     width: 500px;
     height: 600px;
     margin: 20px auto;
-    border: 1px solid #95A0A7;
+    border: 1px solid #d0d5d9;
     border-radius: 8px;
-    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
 }
 
 .form-title {
-    font-weight: 400;
+    font-weight: bold;
     font-size: 35px;
     line-height: 42px;
     letter-spacing: 0.0025em;
-    color: #2A414F;
+    color: #2d3f4a;
     text-align: center;
 }
 
@@ -40,10 +44,10 @@
 }
 
 .btn-submit {
-    width: 415px;
+    width: 430px;
     height: 55px;
     margin-top: 45px;
-    background: rgba(255, 153, 0, 0.3);
+    background: rgba(255, 153, 0, 0.455);
     border-radius: 5px;
     font-weight: 400;
     font-size: 21px;
@@ -55,10 +59,6 @@
 }
 
 .btn-submit:hover{
-    background: rgba(255, 153, 0, 0.6);
+    background: rgba(255, 153, 0, 0.757);
     cursor: pointer;
-}
-
-p{
-    text-align: center;
 }

@@ -12,9 +12,10 @@
     margin-bottom: 5px;
 }
 .product{
-    border: 1px solid #95A0A7;
+    border: 1px solid #95a0a753;
     border-radius: 8px;
     position: relative;
+    background-color: aliceblue;
 }
 
 .product-details{
@@ -35,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .cart-btn p{
     padding-right: 10px;

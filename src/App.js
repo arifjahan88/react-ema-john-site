@@ -7,6 +7,8 @@ import Inventory from "./Components/Inventory/Inventory";
 import { productscartloader } from "./Loaders/Loaders";
 import SignInForm from "./Components/SignIn/SignInForm";
 import SignUpForm from "./Components/SignUp/SignUpForm";
+import Shipping from "./Components/Shipping/Shipping";
+import PrivateRoutes from "./Routes/PrivateRoutes";
 
 function App() {
   const router = createBrowserRouter([
@@ -29,6 +31,14 @@ function App() {
         {
           path: "inventory",
           element: <Inventory></Inventory>,
+        },
+        {
+          path: "shipping",
+          element: (
+            <PrivateRoutes>
+              <Shipping></Shipping>
+            </PrivateRoutes>
+          ),
         },
         {
           path: "signin",

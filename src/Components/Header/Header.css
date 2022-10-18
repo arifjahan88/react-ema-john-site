@@ -13,3 +13,11 @@
     font-size: 17px;
     margin-right: 30px;
 }
+.welcome{
+    color: white;
+}
+.bln-logout{
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

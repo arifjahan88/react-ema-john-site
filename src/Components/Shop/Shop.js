@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
-import { addToDb, getstoredcarddata } from "../../utilities/fakedb";
+import { Link, useLoaderData } from "react-router-dom";
+import {
+  addToDb,
+  deleteShoppingCart,
+  getstoredcarddata,
+} from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./shop.css";
@@ -9,8 +13,12 @@ const Shop = () => {
   const products = useLoaderData();
   const [cart, setcart] = useState([]);
 
+  const clearCart = () => {
+    setcart([]);
+    deleteShoppingCart();
+  };
+
   const clickHundlecart = (selectedproduct) => {
-    console.log(selectedproduct);
     const exists = cart.find((product) => product.id === selectedproduct.id);
     let newcart = [];
     if (!exists) {
@@ -51,7 +59,11 @@ const Shop = () => {
         ))}
       </div>
       <div className="details-container">
-        <Cart cart={cart}></Cart>
+        <Cart clearCart={clearCart} cart={cart}>
+          <Link to="/orders">
+            <button>Review Orders</button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );
